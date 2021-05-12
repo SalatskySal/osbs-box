@@ -4,7 +4,8 @@ FROM osbs-box/koji-base
 # the containerbuild plugin and osbs-client
 RUN dnf -y install "koji-builder" \
                    "koji-containerbuild-builder" \
-                   "osbs-client" && \
+                   "osbs-client" \
+                   "fedpkg-stage" && \
     dnf clean all
 
 # Update osbs-client and koji-containerbuild,
